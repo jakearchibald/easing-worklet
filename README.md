@@ -150,4 +150,15 @@ registerEasing('elastic', {
 });
 ```
 
-But I used a class to be consistent with paint & animation worklets. A constructor allows for up-front calculations that don't need to be done per call, but I don't have strong feelings.
+But I used a class to be consistent with paint & animation worklets. A constructor allows for up-front calculations that don't need to be done per call, but that could also be solved with a function returning a function:
+
+```js
+registerEasing('elastic', {
+  inputArguments: ['<number>', '<number>'],
+  createEasing(inputArgs) {
+    // Do init work here.
+    // Then:
+    return (position) => // …
+  },
+});
+```
