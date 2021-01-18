@@ -40,7 +40,7 @@ Developers generally copy-and-paste or import `cubic-bezier` easings from a [pre
 
 The idea is to allow developers to define their own easing functions with JavaScript, as part of a worklet.
 
-## Defining an easing
+## Defining an easing function
 
 From a document:
 
@@ -88,7 +88,7 @@ This easing is registered for the current document only.
 
 This API is heavily influenced by the design of [paint worklets](https://drafts.css-houdini.org/css-paint-api-1/) and [animation worklets](https://drafts.css-houdini.org/css-animation-worklet-1/).
 
-## Using an easing
+## Using a custom easing function
 
 ```css
 @keyframes move-in {
