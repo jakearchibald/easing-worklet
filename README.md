@@ -64,11 +64,11 @@ registerEasing(
     }
 
     ease(position) {
-      // position is 0-1.
       // This function should return a number where 0 is the start position, and 1 is the end.
       // Returning position as-is would be a linear easing.
       // Here's a rough 'elastic' definition as an example:
-      if (position == 0 || position == 1) return position;
+      if (position <= 0) return 0;
+      if (position >= 1) return 1;
       const s =
         this.amplitude < 1
           ? this.period / 4
